@@ -137,7 +137,7 @@ def main():
     #future_cleaning = node.send_request_cleaning(start_cleaning)
     #future_cleaning.add_done_callback(node.cleaning_response_callback)
 
-    node.send_goal(10.0)
+    node.send_goal(3.0)
 
     rclpy.spin(node)
     rclpy.shutdown()

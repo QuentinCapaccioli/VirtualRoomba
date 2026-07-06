@@ -15,7 +15,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 COPY src/ ./src
 COPY scripts/ ./scripts
-COPY ros_entrypoint.sh /ros_entrypoint.sh
 
 #==============================#
 #  Installation dépendances   #

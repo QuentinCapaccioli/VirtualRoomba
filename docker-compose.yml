@@ -1,32 +1,8 @@
 #=======================================================================================#
 # Objectif : Fichier definissant les applications de chaque conteneur 
 # Nom : Quentin Capaccioli
-# Date : 23/06/2026
+# Date : 06/07/2026
 # Derniere modification: Creation docker compose
-#=======================================================================================#
-
-# services:
-
-#   # ── Conteneur 1 : py_robot_core + py_dashboard_cli ────────────────────
-#   roomba:
-#     build:
-#       context: .
-#       dockerfile: Dockerfile
-#     image: virtual_roomba
-#     container_name: roomba
-#     network_mode: host
-#     environment:
-# #      - DISPLAY=$DISPLAY
-# #      - WAYLAND_DISPLAY=$WAYLAND_DISPLAY
-# #      - XDG_RUNTIME_DIR=/tmp
-#     volumes:
-#       - ./config:/config
-#       - ./launch:/VirtualRoomba/install/virtual_roomba/share/virtual_roomba
-#       # - /tmp/.X11-unix:/tmp/.X11-unix
-#       # - $XDG_RUNTIME_DIR/$WAYLAND_DISPLAY:/tmp/$WAYLAND_DISPLAY
-
-#=======================================================================================#
-# QCA_2026
 #=======================================================================================#
 
 services:
@@ -44,4 +20,5 @@ services:
     environment:
       - ROS_DOMAIN_ID=0
     volumes:
-      - ./src:/VirtualRoomba/src
+      - ./src/virtual_roomba/virtual_roomba/py_dashboard_cli.py:/VirtualRoomba/src/virtual_roomba/virtual_roomba/py_dashboard_cli.py
+      - ./src/virtual_roomba/virtual_roomba/py_robot_core.py:/VirtualRoomba/src/virtual_roomba/virtual_roomba/py_robot_core.py
