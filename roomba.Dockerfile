@@ -29,8 +29,8 @@ RUN apt-get update \
 #==========================#
 RUN . /opt/ros/jazzy/setup.sh \
 && colcon build --symlink-install
-RUN chmod +x /ros_entrypoint.sh
-ENTRYPOINT ["/ros_entrypoint.sh"]
+RUN chmod +x /VirtualRoomba/scripts/ros_entrypoint.sh
+ENTRYPOINT ["/VirtualRoomba/scripts/ros_entrypoint.sh"]
 
 #======================#
 #   Lancement launch   #
